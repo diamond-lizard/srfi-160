@@ -192,7 +192,7 @@ Returns a {{@vector}} containing all except the first/last n elements of {{@vec}
 
 <procedure>(@vector-segment @vec n) -> list [SRFI 152]</procedure>
 
-Returns a list of {{@vectors}}, each of which contains n consecutive elements of {{@vec}}. The last {{@vector}} may be shorter than n.
+Returns a list of {{@vectors}}, each of which contains n consecutive elements of {{@vec}}. The last {{@vector}} may be shorter than {{n}}.
 
 <procedure>(@vector-fold kons knil @vec @vec2 ...) -> object [SRFI 133]</procedure>
 
