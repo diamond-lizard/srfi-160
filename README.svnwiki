@@ -128,7 +128,7 @@ Returns a {{@vector}} initialized with values.
 
 <procedure>(@vector-unfold f length seed) -> @vector [SRFI 133]</procedure>
 
-Creates a vector whose length is length and iterates across each index {{k}} between 0 and {{length - 1}}, applying {{f}} at each iteration to the current index and current state, in that order, to receive two values: the element to put in the kth slot of the new vector and a new state for the next iteration. On the first call to f, the state's value is seed.
+Creates a vector whose length is length and iterates across each index {{k}} between 0 and {{length - 1}}, applying {{f}} at each iteration to the current index and current state, in that order, to receive two values: the element to put in the kth slot of the new vector and a new state for the next iteration. On the first call to {{f}}, the state's value is seed.
 
 <procedure>(@vector-unfold-right f length seed) -> @vector [SRFI 133]</procedure>
 
