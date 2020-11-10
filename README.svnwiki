@@ -198,9 +198,9 @@ Returns a list of {{@vectors}}, each of which contains n consecutive elements of
 
 <procedure>(@vector-fold-right kons knil @vec @vec2 ...) -> object [SRFI 133]</procedure>
 
-When one {{@vector}} argument {{@vec}} is given, folds kons over the elements of {{@vec}} in increasing/decreasing order using knil as the initial value. The kons procedure is called with the state first and the element second, as in SRFIs 43 and 133 (heterogeneous vectors). This is the opposite order to that used in SRFI 1 (lists) and the various string SRFIs.
+When one {{@vector}} argument {{@vec}} is given, folds {{kons}} over the elements of {{@vec}} in increasing/decreasing order using knil as the initial value. The {{kons}} procedure is called with the state first and the element second, as in SRFIs 43 and 133 (heterogeneous vectors). This is the opposite order to that used in SRFI 1 (lists) and the various string SRFIs.
 
-When multiple {{@vector}} arguments are given, kons is called with the current state value and each value from all the vectors; @vector-fold scans elements from left to right, while @vector-fold-right does from right to left. If the lengths of vectors differ, only the portion of each vector up to the length of the shortest vector is scanned.
+When multiple {{@vector}} arguments are given, {{kons}} is called with the current state value and each value from all the vectors; @vector-fold scans elements from left to right, while @vector-fold-right does from right to left. If the lengths of vectors differ, only the portion of each vector up to the length of the shortest vector is scanned.
 
 <procedure>(@vector-map f @vec @vec2 ...) -> @vector [SRFI 133]</procedure>
 
