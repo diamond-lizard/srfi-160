@@ -66,11 +66,21 @@ A procedure {{f}} that takes the parameters {{arg[1] arg[2] ...}} and returns a 
 
 Must be a heterogeneous vector, i.e. it must satisfy the predicate vector?.
 
-<parameter>@vec, @to, @from</parameter>
+<parameter>@vec
+
+<parameter>@to</parameter>
+
+<parameter>@from</parameter>
 
 Must be a homogeneous vector, i.e. it must satisfy the predicate {{@vector?}}. In {{@vector-copy!}} and {{reverse-@vector-copy!}}, {{@to}} is the destination and {{@from}} is the source.
 
-<parameter>i, j, start, at</parameter>
+<parameter>i</parameter>
+
+<parameter>j</parameter>
+
+<parameter>start</parameter>
+
+<parameter>at</parameter>
 
 Must be an exact nonnegative integer less than the length of the {{@vector}}. In {{@vector-copy!}} and {{reverse-@vector-copy!}}, at refers to the destination and {{start}} to the source.
 
@@ -88,9 +98,13 @@ Must be a procedure taking one or more arguments that returns one value, which i
 
 <parameter>=</parameter>
 
-    Must be an equivalence procedure.
+Must be an equivalence procedure.
 
-<parameter>obj, seed, knil</parameter>
+<parameter>obj</parameter>
+
+<parameter>seed</parameter>
+
+<parameter>knil</parameter>
 
 Any Scheme object.
 
