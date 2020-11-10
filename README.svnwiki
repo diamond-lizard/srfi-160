@@ -372,26 +372,26 @@ The implementation depends on SRFI 4. For systems that do not have a native SRFI
 
 The tests are for the c64 and c128 procedures and the @? procedures only. The assumption is that tests for the underlying SRFI 4 procedures suffice for everything else.
 === The following files are provided:
-  * srfi.160.base.scm - Chicken 5 (srfi 160 base) library.
-  * srfi/160/base.sld - R7RS (srfi 160 base) library.
-  * srfi/160/base/complex.scm - Complex number implementation on top of SRFI 4.
-  * srfi/160/base/valid.scm - Validity (@?) predicates.
-  * srfi/160/base/at-vector2list.scm - Reimplementation of SRFI 4's @vector->list procedures that accept {{start}} and {{end}} optional arguments.
-  * srfi/160/base/r7rec.scm - Record-type definitions for R7RS or SRFI 9.
-  * srfi/160/base/r6rec.scm - Record-type definitions for R6RS.
-  * shared-base-tests.scm - Shared tests (no dependencies).
-  * chibi-base-tests.scm - Chibi test script wrapper.
-  * chicken-base-tests.scm - Chicken 5 test script wrapper.
+* srfi.160.base.scm - Chicken 5 (srfi 160 base) library.
+* srfi/160/base.sld - R7RS (srfi 160 base) library.
+* srfi/160/base/complex.scm - Complex number implementation on top of SRFI 4.
+* srfi/160/base/valid.scm - Validity (@?) predicates.
+* srfi/160/base/at-vector2list.scm - Reimplementation of SRFI 4's @vector->list procedures that accept {{start}} and {{end}} optional arguments.
+* srfi/160/base/r7rec.scm - Record-type definitions for R7RS or SRFI 9.
+* srfi/160/base/r6rec.scm - Record-type definitions for R6RS.
+* shared-base-tests.scm - Shared tests (no dependencies).
+* chibi-base-tests.scm - Chibi test script wrapper.
+* chicken-base-tests.scm - Chicken 5 test script wrapper.
 === The SRFI 160 libraries
 The following files are provided:
 
-  * srfi/160/at.sld - Skeleton for Chibi libraries. Can be adapted to any R7RS system.
-  * srfi.160.at.scm - Skeleton for Chicken 5 libraries. Can be adapted to any R5RS system with simple byte vectors.
-  * srfi/160/at-impl.scm - Skeleton for shared implementation of SRFI 160 procedures.
-  * shared-tests.scm - Tests of the s16 library only (depends on Chicken or Chibi test library). The assumption is that if s16 works, everything works.
-  * chibi-tests.scm - Chibi test script wrapper.
-  * chicken-tests.scm - Chicken 5 test script wrapper.
-  * gauche-tests.scm - Gauche test script with embedded testing library.
+* srfi/160/at.sld - Skeleton for Chibi libraries. Can be adapted to any R7RS system.
+* srfi.160.at.scm - Skeleton for Chicken 5 libraries. Can be adapted to any R5RS system with simple byte vectors.
+* srfi/160/at-impl.scm - Skeleton for shared implementation of SRFI 160 procedures.
+* shared-tests.scm - Tests of the s16 library only (depends on Chicken or Chibi test library). The assumption is that if s16 works, everything works.
+* chibi-tests.scm - Chibi test script wrapper.
+* chicken-tests.scm - Chicken 5 test script wrapper.
+* gauche-tests.scm - Gauche test script with embedded testing library.
 === Acknowledgements
 Thanks to all participants in the SRFI 160 mailing list over the unconscionably long time it took me to get this proposal to finalization. Special thanks to Shiro Kawai
 for bringing up many issues and contributing the code that extended many procedures from one {{@vector}} to many.
