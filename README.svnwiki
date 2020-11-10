@@ -108,7 +108,9 @@ Must be an equivalence procedure.
 
 Any Scheme object.
 
-<parameter>fill, value</parameter>
+<parameter>fill</parameter>
+
+<parameter>value</parameter>
 
 Any number that is valid with respect to the {{@vec}}.
 
