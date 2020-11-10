@@ -304,7 +304,7 @@ Like vector-unfold, but the elements are copied into the vector {{@vec}} startin
 
 <procedure>(@vector-unfold-right! f @vec start end seed) -> @vector [SRFI 133]</procedure>
 
-The same as @vector-unfold!, but initializes the {{@vector}} from right to left.
+The same as {{@vector-unfold!}}, but initializes the {{@vector}} from right to left.
 === Conversion
 <procedure>(@vector->list @vec [start [end]]) -> proper-list [SRFI 4 plus start and end]</procedure>
 
