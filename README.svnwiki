@@ -180,7 +180,7 @@ Returns {{#t}} if obj is a {{@vector}}, and {{#f}} otherwise.
 
 <procedure>(@vector-empty? @vec) -> boolean [SRFI 133]</procedure>
 
-Returns {{#t}} if @vec has a length of zero, and {{#f}} otherwise.
+Returns {{#t}} if {{@vec}} has a length of zero, and {{#f}} otherwise.
 
 <procedure>(@vector= @vec ...) -> boolean [SRFI 133]</procedure>
 
@@ -198,13 +198,13 @@ Returns the length of {{@vec}}
 
 <procedure>(@vector-take-right @vec n) -> @vector [SRFI 152]</procedure>
 
-Returns a {{@vector}} containing the first/last n elements of {{@vec}}.
+Returns a {{@vector}} containing the first/last {{n}} elements of {{@vec}}.
 
 <procedure>(@vector-drop @vec n) -> @vector [SRFI 152]</procedure>
 
 <procedure>(@vector-drop-right @vec n) -> @vector [SRFI 152]</procedure>
 
-Returns a {{@vector}} containing all except the first/last n elements of {{@vec}}.
+Returns a {{@vector}} containing all except the first/last {{n}} elements of {{@vec}}.
 
 <procedure>(@vector-segment @vec n) -> list [SRFI 152]</procedure>
 
