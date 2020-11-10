@@ -157,15 +157,15 @@ Concatenates the result of applying @vector-copy to each triplet of @vec, start,
 === Predicates
 <procedure>(@? obj) -> boolean</procedure>
 
-Returns #t if obj is a valid element of an {{@vector}}, and #f otherwise.
+Returns {{#t}} if obj is a valid element of an {{@vector}}, and #f otherwise.
 
 <procedure>(@vector? obj) -> boolean [SRFI 4]</procedure>
 
-Returns #t if obj is a {{@vector}}, and #f otherwise.
+Returns {{#t}} if obj is a {{@vector}}, and #f otherwise.
 
 <procedure>(@vector-empty? @vec) -> boolean [SRFI 133]</procedure>
 
-Returns #t if @vec has a length of zero, and #f otherwise.
+Returns {{#t}} if @vec has a length of zero, and #f otherwise.
 
 <procedure>(@vector= @vec ...) -> boolean [SRFI 133]</procedure>
 
@@ -255,13 +255,13 @@ When multiple vectors are passed, pred? must take the same number of arguments a
 
 <procedure>(@vector-any pred? @vec @vec2 ...) -> value or boolean [SRFI 133]</procedure>
 
-Returns first non-false result of applying pred? on a element from the @vec, or #f if there is no such element. If @vec is empty, returns #t
+Returns first non-false result of applying pred? on a element from the @vec, or #f if there is no such element. If @vec is empty, returns {{#t}}
 
 When multiple vectors are passed, pred? must take the same number of arguments as the number of vectors, and corresponding elements from each vector are passed for each iteration. If the lengths of vectors differ, it stops at the end of the shortest one.
 
 <procedure>(@vector-every pred? @vec @vec2 ...) -> value or boolean [SRFI 133]</procedure>
 
-If all elements from @vec satisfy pred?, return the last result of pred?. If not all do, return #f. If @vec is empty, return #t
+If all elements from @vec satisfy pred?, return the last result of pred?. If not all do, return #f. If @vec is empty, return {{#t}}
 
 When multiple vectors are passed, pred? must take the same number of arguments as the number of vectors, and corresponding elements from each vector is passed for each iteration. If the lengths of vectors differ, it stops at the end of the shortest one.
 
