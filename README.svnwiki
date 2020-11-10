@@ -60,7 +60,7 @@ In the section containing specifications of procedures, the following notation i
 
 <procedure>(f arg[1] arg[2] ...) -> something</procedure>
 
-A procedure f that takes the parameters {{arg[1] arg[2] ...}} and returns a value of the type something. If two values are returned, two types are specified. If something is unspecified, then f returns a single implementation-dependent value; this SRFI does not specify what it returns, and in order to write portable code, the return value should be ignored.
+A procedure {{f}} that takes the parameters {{arg[1] arg[2] ...}} and returns a value of the type something. If two values are returned, two types are specified. If something is unspecified, then {{f}} returns a single implementation-dependent value; this SRFI does not specify what it returns, and in order to write portable code, the return value should be ignored.
 
 <parameter>vec</parameter>
 
@@ -128,7 +128,7 @@ Returns a {{@vector}} initialized with values.
 
 <procedure>(@vector-unfold f length seed) -> @vector [SRFI 133]</procedure>
 
-Creates a vector whose length is length and iterates across each index {{k}} between 0 and length - 1, applying f at each iteration to the current index and current state, in that order, to receive two values: the element to put in the kth slot of the new vector and a new state for the next iteration. On the first call to f, the state's value is seed.
+Creates a vector whose length is length and iterates across each index {{k}} between 0 and {{length - 1}}, applying {{f}} at each iteration to the current index and current state, in that order, to receive two values: the element to put in the kth slot of the new vector and a new state for the next iteration. On the first call to f, the state's value is seed.
 
 <procedure>(@vector-unfold-right f length seed) -> @vector [SRFI 133]</procedure>
 
@@ -208,9 +208,9 @@ When multiple {{@vector}} arguments are given, kons is called with the current s
 
 <procedure>(@vector-for-each f @vec @vec2 ...) -> unspecified [SRFI 133]</procedure>
 
-Iterate over the elements of {{@vec}} and apply f to each, returning respectively a {{@vector}} of the results, an undefined value with the results placed back in {{@vec}}, and an undefined value with no change to {{@vec}}.
+Iterate over the elements of {{@vec}} and apply {{f}} to each, returning respectively a {{@vector}} of the results, an undefined value with the results placed back in {{@vec}}, and an undefined value with no change to {{@vec}}.
 
-If more than one vector is passed, f gets one element from each vector as arguments. If the lengths of the vectors differ, iteration stops at the end of the shortest vector. For @vector-map!, only {{@vec}} is modified even when multiple vectors are passed.
+If more than one vector is passed, {{f}} gets one element from each vector as arguments. If the lengths of the vectors differ, iteration stops at the end of the shortest vector. For @vector-map!, only {{@vec}} is modified even when multiple vectors are passed.
 
 If @vector-map or @vector-map! returns more than once (i.e. because of a continuation captured by f), the values returned or stored by earlier returns may be mutated.
 
