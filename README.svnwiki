@@ -25,8 +25,8 @@ All are part of SRFI 4.
 
 There are two datatypes of inexact real homogeneous vectors (which will be called float vectors):
 
-f32vector: inexact real, typically 32 bits
-f64vector: inexact real, typically 64 bits
+* f32vector: inexact real, typically 32 bits
+* f64vector: inexact real, typically 64 bits
 
 These are also part of SRFI 4.
 
