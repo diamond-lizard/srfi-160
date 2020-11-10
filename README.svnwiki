@@ -140,7 +140,7 @@ Makes a copy of the portion of {{@vec}} from start to end and returns it.
 
 <procedure>(@vector-reverse-copy @vec [start [end]]) -> @vector [SRFI 133]</procedure>
 
-The same as @vector-copy, but in reverse order.
+The same as {{@vector-copy}}, but in reverse order.
 
 <procedure>(@vector-append @vec ...) -> @vector [SRFI 133]</procedure>
 
@@ -152,7 +152,7 @@ The same as @vector-append, but takes a list of @vectors rather than multiple ar
 
 <procedure>(@vector-append-subvectors [@vec start end] ...) -> @vector [SRFI 133]</procedure>
 
-Concatenates the result of applying @vector-copy to each triplet of {{@vec}}, start, end arguments, but may be implemented more efficiently.
+Concatenates the result of applying {{@vector-copy}} to each triplet of {{@vec}}, start, end arguments, but may be implemented more efficiently.
 === Predicates
 <procedure>(@? obj) -> boolean</procedure>
 
