@@ -338,7 +338,7 @@ Each homogeneous vector datatype has an external representation which may be sup
 
 For each value of {{@}} in { {{s8, u8, s16, u16, s32, u32, s64, u64, f32, f64, c64, c128}} }, if the datatype {{@vector}} is supported, then the external representation of instances of the datatype {{@vector}} is #@( ...elements... ).
 
-For example, {{#u8(0 #e1e2 #xff)}} is a u8vector of length 3 containing 0, 100 and 255; {{#f64(-1.5)}} is an f64vector of length 1 containing -1.5.
+For example, {{#u8(0 #e1e2 #xff)}} is a u8vector of length 3 containing 0, 100 and 255; {{#f64(-1.5)}} is an {{f64vector}} of length 1 containing -1.5.
 
 Note that the syntax for float vectors conflicts with R5RS, which parses #f32() as 3 objects: {{#f}}, {{32}} and {{()}}. For this reason, conformance to this SRFI implies this minor nonconformance to R5RS.
 
