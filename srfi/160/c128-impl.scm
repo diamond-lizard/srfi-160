@@ -358,7 +358,7 @@
     (apply c128vector-index-right (lambda xs (not (apply pred xs))) vec vecs)))
 
 (define (c128vector-any pred vec . vecs)
-  (if (null? vec)
+  (if (null? vecs)
     ;; fast path
     (let ((len (c128vector-length vec)))
       (let loop ((i 0))
@@ -376,7 +376,7 @@
          (else (loop (+ i 1))))))))
 
 (define (c128vector-every pred vec . vecs)
-  (if (null? vec)
+  (if (null? vecs)
     ;; fast path
     (let ((len (c128vector-length vec)))
       (let loop ((i 0) (last #t))
