@@ -8,7 +8,7 @@ Like lists, Scheme vectors are a heterogeneous datatype which impose no restrict
 
 This SRFI specifies a set of homogeneous vector datatypes which cover the most practical cases, that is where the type of the elements is numeric (exact integer or inexact real or complex) and the precision and representation is efficiently implemented on the hardware of most current computer architectures (8, 16, 32 and 64 bit integers, either signed or unsigned, and 32 and 64 bit floating point numbers).
 
-This SRFI extends SRFI 4 by providing the additional c64vector and c128vector types, and by providing analogues for almost all of the heterogeneous vector procedures of SRFI 133. There are some additional procedures, most of which are closely analogous to the string procedures of [[https://srfi.schemers.org/srfi-152/srfi-152.html|SRFI 152]].
+This SRFI extends SRFI 4 by providing the additional {{c64vector}} and {{c128vector}} types, and by providing analogues for almost all of the heterogeneous vector procedures of SRFI 133. There are some additional procedures, most of which are closely analogous to the string procedures of [[https://srfi.schemers.org/srfi-152/srfi-152.html|SRFI 152]].
 
 Note that there are no conversions between homogeneous vectors and strings in this SRFI. In addition, there is no support for u1vectors (bitvectors) provided, not because they are not useful, but because they are different enough in both specification and implementation to be put into a future SRFI of their own.
 === Specification
