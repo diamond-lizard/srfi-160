@@ -250,7 +250,7 @@ When multiple vectors are passed, {{pred?}} must take the same number of argumen
 
 Returns the index of the first/last element of {{@vec}} that does not satisfy {{pred?}}.
 
-When multiple vectors are passed, {{pred?}} must take the same number of arguments as the number of vectors, and corresponding elements from each vector are passed for each iteration. If the lengths of vectors differ, @vector-skip stops iteration at the end of the shortest one. Lengths of vectors must be the same for @vector-skip-right.
+When multiple vectors are passed, {{pred?}} must take the same number of arguments as the number of vectors, and corresponding elements from each vector are passed for each iteration. If the lengths of vectors differ, {{@vector-skip}} stops iteration at the end of the shortest one. Lengths of vectors must be the same for {{@vector-skip-right}}.
 
 <procedure>(@vector-any pred? @vec @vec2 ...) -> value or boolean [SRFI 133]</procedure>
 
