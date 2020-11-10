@@ -308,7 +308,7 @@ Returns a list, @vector, or heterogeneous vector with the same elements as the a
 
 Returns a SRFI 121 generator that generates all the values of @vector in order. Note that the generator is finite.
 === Comparators
-@vector-comparator
+{{@vector-comparator}}
 
 Variable containing a SRFI 128 comparator whose components provide ordering and hashing of @vectors.
 === Output
