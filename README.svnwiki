@@ -242,7 +242,7 @@ Drops the longest initial prefix/suffix of {{@vec}} such that all its elements s
 
 Return the index of the first/last element of {{@vec}} that satisfies {{pred?}}.
 
-When multiple vectors are passed, {{pred?}} must take the same number of arguments as the number of vectors, and corresponding elements from each vector are passed for each iteration. If the lengths of vectors differ, @vector-index stops iteration at the end of the shortest one. Lengths of vectors must be the same for @vector-index-right.
+When multiple vectors are passed, {{pred?}} must take the same number of arguments as the number of vectors, and corresponding elements from each vector are passed for each iteration. If the lengths of vectors differ, {{@vector-index}} stops iteration at the end of the shortest one. Lengths of vectors must be the same for {{@vector-index-right}}.
 
 <procedure>(@vector-skip pred? @vec @vec2 ...) -> exact nonnegative integer or #f [SRFI 133]</procedure>
 
