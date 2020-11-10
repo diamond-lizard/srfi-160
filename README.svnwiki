@@ -148,7 +148,7 @@ Returns a {{@vector}} containing all the elements of the {{@vecs}} in order.
 
 <procedure>(@vector-concatenate list-of-@vectors) -> @vector [SRFI 133]</procedure>
 
-The same as @vector-append, but takes a list of @vectors rather than multiple arguments.
+The same as {{@vector-append}}, but takes a list of {{@vectors}} rather than multiple arguments.
 
 <procedure>(@vector-append-subvectors [@vec start end] ...) -> @vector [SRFI 133]</procedure>
 
@@ -168,7 +168,7 @@ Returns {{#t}} if @vec has a length of zero, and {{#f}} otherwise.
 
 <procedure>(@vector= @vec ...) -> boolean [SRFI 133]</procedure>
 
-Compares the {{@vecs}} for elementwise equality, using = to do the comparisons. Returns {{#f}} unless all @vectors are the same length.
+Compares the {{@vecs}} for elementwise equality, using = to do the comparisons. Returns {{#f}} unless all {{@vectors}} are the same length.
 === Selectors
 <procedure>(@vector-ref @vec i) -> value [SRFI 4]</procedure>
 
@@ -192,7 +192,7 @@ Returns a {{@vector}} containing all except the first/last n elements of {{@vec}
 
 <procedure>(@vector-segment @vec n) -> list [SRFI 152]</procedure>
 
-Returns a list of @vectors, each of which contains n consecutive elements of {{@vec}}. The last {{@vector}} may be shorter than n.
+Returns a list of {{@vectors}}, each of which contains n consecutive elements of {{@vec}}. The last {{@vector}} may be shorter than n.
 
 <procedure>(@vector-fold kons knil @vec @vec2 ...) -> object [SRFI 133]</procedure>
 
@@ -326,7 +326,7 @@ Returns a [[https://srfi.schemers.org/srfi-121/srfi-121.html][SRFI 121]] generat
 === Comparators
 {{@vector-comparator}}
 
-Variable containing a [[https://srfi.schemers.org/srfi-128/srfi-128.html][SRFI 128]] comparator whose components provide ordering and hashing of @vectors.
+Variable containing a [[https://srfi.schemers.org/srfi-128/srfi-128.html][SRFI 128]] comparator whose components provide ordering and hashing of {{@vectors}}.
 === Output
 <procedure>(write-@vector @vec [ port ] ) -> unspecified</procedure>
 
