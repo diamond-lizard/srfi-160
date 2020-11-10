@@ -60,7 +60,7 @@ In the section containing specifications of procedures, the following notation i
 
 <procedure>(f arg[1] arg[2] ...) -> something</procedure>
 
-A procedure f that takes the parameters arg[1] arg[2] ... and returns a value of the type something. If two values are returned, two types are specified. If something is unspecified, then f returns a single implementation-dependent value; this SRFI does not specify what it returns, and in order to write portable code, the return value should be ignored.
+A procedure f that takes the parameters {{arg[1] arg[2] ...}} and returns a value of the type something. If two values are returned, two types are specified. If something is unspecified, then f returns a single implementation-dependent value; this SRFI does not specify what it returns, and in order to write portable code, the return value should be ignored.
 
 <parameter>vec</parameter>
 
