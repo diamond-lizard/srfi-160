@@ -1,12 +1,14 @@
 * SRFI-160: Homogeneous numeric vector libraries
 ** Abstract
-This SRFI describes a set of operations on SRFI 4 homogeneous vector types (plus a few additional types) that are closely analogous to the vector operations library, SRFI 133. An external representation is specified which may be supported by the read and write procedures and by the program parser so that programs can contain references to literal homogeneous vectors.
+This SRFI describes a set of operations on [[https://srfi.schemers.org/srfi-4/srfi-4.html][SRFI 4]] homogeneous vector types (plus a few additional types) that are closely analogous to the vector operations library, [[https://srfi.schemers.org/srfi-133/srfi-133.html][SRFI 133]]. An external representation is specified which may be supported by the read and write procedures and by the program parser so that programs can contain references to literal homogeneous vectors.
+
+For more information see:  [[https://srfi.schemers.org/srfi-160/][SRFI-160: Homogeneous numeric vector libraries]]
 ** Rationale
 Like lists, Scheme vectors are a heterogeneous datatype which impose no restriction on the type of the elements. This generality is not needed for applications where all the elements are of the same type. The use of Scheme vectors is not ideal for such applications because, in the absence of a compiler with a fancy static analysis, the representation will typically use some form of boxing of the elements which means low space efficiency and slower access to the elements. Moreover, homogeneous vectors are convenient for interfacing with low-level libraries (e.g. binary block I/O) and to interface with foreign languages which support homogeneous vectors. Finally, the use of homogeneous vectors allows certain errors to be caught earlier.
 
 This SRFI specifies a set of homogeneous vector datatypes which cover the most practical cases, that is where the type of the elements is numeric (exact integer or inexact real or complex) and the precision and representation is efficiently implemented on the hardware of most current computer architectures (8, 16, 32 and 64 bit integers, either signed or unsigned, and 32 and 64 bit floating point numbers).
 
-This SRFI extends SRFI 4 by providing the additional c64vector and c128vector types, and by providing analogues for almost all of the heterogeneous vector procedures of SRFI 133. There are some additional procedures, most of which are closely analogous to the string procedures of SRFI 152.
+This SRFI extends SRFI 4 by providing the additional c64vector and c128vector types, and by providing analogues for almost all of the heterogeneous vector procedures of SRFI 133. There are some additional procedures, most of which are closely analogous to the string procedures of [[https://srfi.schemers.org/srfi-152/srfi-152.html][SRFI 152]].
 
 Note that there are no conversions between homogeneous vectors and strings in this SRFI. In addition, there is no support for u1vectors (bitvectors) provided, not because they are not useful, but because they are different enough in both specification and implementation to be put into a future SRFI of their own.
 ** Specification
@@ -306,11 +308,11 @@ Returns a list, @vector, or heterogeneous vector with the same elements as the a
 ** Generators
 (make-@vector-generator @vector)
 
-Returns a SRFI 121 generator that generates all the values of @vector in order. Note that the generator is finite.
+Returns a [[https://srfi.schemers.org/srfi-121/srfi-121.html][SRFI 121]] generator that generates all the values of @vector in order. Note that the generator is finite.
 ** Comparators
 @vector-comparator
 
-Variable containing a SRFI 128 comparator whose components provide ordering and hashing of @vectors.
+Variable containing a [[https://srfi.schemers.org/srfi-128/srfi-128.html][SRFI 128]] comparator whose components provide ordering and hashing of @vectors.
 ** Output
 (write-@vector @vec [ port ] ) -> unspecified
 
