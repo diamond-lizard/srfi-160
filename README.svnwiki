@@ -12,14 +12,14 @@ Note that there are no conversions between homogeneous vectors and strings in th
 === Specification
 There are eight datatypes of exact integer homogeneous vectors (which will be called integer vectors):
 
-s8vector: signed exact integer in the range -2^7 to 2^7-1
-u8vector: unsigned exact integer in the range 0 to 2^8-1
-s16vector: signed exact integer in the range -2^15 to 2^15-1
-u16vector: unsigned exact integer in the range 0 to 2^16-1
-s32vector: signed exact integer in the range -2^31 to 2^31-1
-u32vector: unsigned exact integer in the range 0 to 2^32-1
-s64vector: signed exact integer in the range -2^63 to 2^63-1
-u64vector: unsigned exact integer in the range 0 to 2^64-1
+* s8vector: signed exact integer in the range -2^7 to 2^7-1
+* u8vector: unsigned exact integer in the range 0 to 2^8-1
+* s16vector: signed exact integer in the range -2^15 to 2^15-1
+* u16vector: unsigned exact integer in the range 0 to 2^16-1
+* s32vector: signed exact integer in the range -2^31 to 2^31-1
+* u32vector: unsigned exact integer in the range 0 to 2^32-1
+* s64vector: signed exact integer in the range -2^63 to 2^63-1
+* u64vector: unsigned exact integer in the range 0 to 2^64-1
 
 All are part of SRFI 4.
 
