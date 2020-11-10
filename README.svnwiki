@@ -216,9 +216,9 @@ If @vector-map or @vector-map! returns more than once (i.e. because of a continu
 
 <procedure>(@vector-count pred? @vec @vec2 ...) -> exact nonnegative integer [SRFI 133]</procedure>
 
-Call pred? on each element of {{@vec}} and return the number of calls that return true.
+Call {{pred?}} on each element of {{@vec}} and return the number of calls that return true.
 
-When multiple vectors are given, pred? must take the same number of arguments as the number of vectors, and corresponding elements from each vector are given for each iteration, which stops at the end of the shortest vector.
+When multiple vectors are given, {{pred?}} must take the same number of arguments as the number of vectors, and corresponding elements from each vector are given for each iteration, which stops at the end of the shortest vector.
 
 <procedure>(@vector-cumulate f knil @vec) -> @vector [SRFI 133]</procedure>
 
@@ -228,7 +228,7 @@ Like @vector-fold, but returns an {{@vector}} of partial results rather than jus
 
 <procedure>(@vector-take-while-right pred? @vec) -> @vector [SRFI 152]</procedure>
 
-Return the shortest prefix/suffix of {{@vec}} all of whose elements satisfy pred?.
+Return the shortest prefix/suffix of {{@vec}} all of whose elements satisfy {{pred?}}.
 
 <procedure>(@vector-drop-while pred? @vec) -> @vector [SRFI 152]</procedure>
 
@@ -240,39 +240,39 @@ Drops the longest initial prefix/suffix of {{@vec}} such that all its elements s
 
 <procedure>(@vector-index-right pred? @vec @vec2 ...) -> exact nonnegative integer or #f [SRFI 133]</procedure>
 
-Return the index of the first/last element of {{@vec}} that satisfies pred?.
+Return the index of the first/last element of {{@vec}} that satisfies {{pred?}}.
 
-When multiple vectors are passed, pred? must take the same number of arguments as the number of vectors, and corresponding elements from each vector are passed for each iteration. If the lengths of vectors differ, @vector-index stops iteration at the end of the shortest one. Lengths of vectors must be the same for @vector-index-right.
+When multiple vectors are passed, {{pred?}} must take the same number of arguments as the number of vectors, and corresponding elements from each vector are passed for each iteration. If the lengths of vectors differ, @vector-index stops iteration at the end of the shortest one. Lengths of vectors must be the same for @vector-index-right.
 
 <procedure>(@vector-skip pred? @vec @vec2 ...) -> exact nonnegative integer or #f [SRFI 133]</procedure>
 
 <procedure>(@vector-skip-right pred? @vec @vec2 ...) -> exact nonnegative integer or #f [SRFI 133]</procedure>
 
-Returns the index of the first/last element of {{@vec}} that does not satisfy pred?.
+Returns the index of the first/last element of {{@vec}} that does not satisfy {{pred?}}.
 
-When multiple vectors are passed, pred? must take the same number of arguments as the number of vectors, and corresponding elements from each vector are passed for each iteration. If the lengths of vectors differ, @vector-skip stops iteration at the end of the shortest one. Lengths of vectors must be the same for @vector-skip-right.
+When multiple vectors are passed, {{pred?}} must take the same number of arguments as the number of vectors, and corresponding elements from each vector are passed for each iteration. If the lengths of vectors differ, @vector-skip stops iteration at the end of the shortest one. Lengths of vectors must be the same for @vector-skip-right.
 
 <procedure>(@vector-any pred? @vec @vec2 ...) -> value or boolean [SRFI 133]</procedure>
 
-Returns first non-false result of applying pred? on a element from the {{@vec}}, or {{#f}} if there is no such element. If {{@vec}} is empty, returns #t
+Returns first non-false result of applying {{pred?}} on a element from the {{@vec}}, or {{#f}} if there is no such element. If {{@vec}} is empty, returns #t
 
-When multiple vectors are passed, pred? must take the same number of arguments as the number of vectors, and corresponding elements from each vector are passed for each iteration. If the lengths of vectors differ, it stops at the end of the shortest one.
+When multiple vectors are passed, {{pred?}} must take the same number of arguments as the number of vectors, and corresponding elements from each vector are passed for each iteration. If the lengths of vectors differ, it stops at the end of the shortest one.
 
 <procedure>(@vector-every pred? @vec @vec2 ...) -> value or boolean [SRFI 133]</procedure>
 
-If all elements from {{@vec}} satisfy pred?, return the last result of pred?. If not all do, return {{#f}}. If {{@vec}} is empty, return #t
+If all elements from {{@vec}} satisfy {{pred?}}, return the last result of {{pred?}}. If not all do, return {{#f}}. If {{@vec}} is empty, return #t
 
-When multiple vectors are passed, pred? must take the same number of arguments as the number of vectors, and corresponding elements from each vector is passed for each iteration. If the lengths of vectors differ, it stops at the end of the shortest one.
+When multiple vectors are passed, {{pred?}} must take the same number of arguments as the number of vectors, and corresponding elements from each vector is passed for each iteration. If the lengths of vectors differ, it stops at the end of the shortest one.
 
 <procedure>(@vector-partition pred? @vec) -> @vector and integer [SRFI 133]</procedure>
 
-Returns an {{@vector}} of the same type as {{@vec}}, but with all elements satisfying pred? in the leftmost part of the vector and the other elements in the remaining part. The order of elements is otherwise preserved. Returns two values, the new {{@vector}} and the number of elements satisfying pred?.
+Returns an {{@vector}} of the same type as {{@vec}}, but with all elements satisfying {{pred?}} in the leftmost part of the vector and the other elements in the remaining part. The order of elements is otherwise preserved. Returns two values, the new {{@vector}} and the number of elements satisfying {{pred?}}.
 
 <procedure>(@vector-filter pred? @vec) -> @vector [SRFI 152]</procedure>
 
 <procedure>(@vector-remove pred? @vec) -> @vector [SRFI 152]</procedure>
 
-Return an {{@vector}} containing the elements of {{@vec}} that satisfy / do not satisfy pred?.
+Return an {{@vector}} containing the elements of {{@vec}} that satisfy / do not satisfy {{pred?}}.
 === Mutators
 <procedure>(@vector-set! @vec i value) -> unspecified [SRFI 4]</procedure>
 
