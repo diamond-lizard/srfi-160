@@ -72,11 +72,11 @@ Must be a homogeneous vector, i.e. it must satisfy the predicate {{@vector?}}. I
 
 <parameter>i, j, start, at</parameter>
 
-Must be an exact nonnegative integer less than the length of the {{@vector}}. In {{@vector-copy!}} and {{reverse-@vector-copy!}}, at refers to the destination and start to the source.
+Must be an exact nonnegative integer less than the length of the {{@vector}}. In {{@vector-copy!}} and {{reverse-@vector-copy!}}, at refers to the destination and {{start}} to the source.
 
 <parameter>end</parameter>
 
-Must be an exact nonnegative integer not less than start and not greater than the length of the vector. This indicates the index directly before which traversal will stop -- processing will occur until the index of the vector is one less than end. It is the open right side of a range.
+Must be an exact nonnegative integer not less than {{start}} and not greater than the length of the vector. This indicates the index directly before which traversal will stop -- processing will occur until the index of the vector is one less than {{end}}. It is the open right side of a range.
 
 <parameter>f</parameter>
 
@@ -136,7 +136,7 @@ The same as @vector-unfold, but initializes the {{@vector}} from right to left.
 
 <procedure>(@vector-copy @vec [start [end]]) -> @vector [SRFI 133]</procedure>
 
-Makes a copy of the portion of {{@vec}} from start to end and returns it.
+Makes a copy of the portion of {{@vec}} from {{start}} to {{end}} and returns it.
 
 <procedure>(@vector-reverse-copy @vec [start [end]]) -> @vector [SRFI 133]</procedure>
 
@@ -152,7 +152,7 @@ The same as {{@vector-append}}, but takes a list of {{@vectors}} rather than mul
 
 <procedure>(@vector-append-subvectors [@vec start end] ...) -> @vector [SRFI 133]</procedure>
 
-Concatenates the result of applying {{@vector-copy}} to each triplet of {{@vec}}, start, end arguments, but may be implemented more efficiently.
+Concatenates the result of applying {{@vector-copy}} to each triplet of {{@vec}}, {{start}}, {{end}} arguments, but may be implemented more efficiently.
 === Predicates
 <procedure>(@? obj) -> boolean</procedure>
 
@@ -284,15 +284,15 @@ Interchanges the ith and jth elements of {{@vec}}.
 
 <procedure>(@vector-fill! @vec fill [start [end]]) -> unspecified [SRFI 133]</procedure>
 
-Fills the portion of {{@vec}} from start to end with the value fill.
+Fills the portion of {{@vec}} from {{start}} to {{end}} with the value fill.
 
 <procedure>(@vector-reverse! @vec [start [end]]) -> unspecified [SRFI 133]</procedure>
 
-Reverses the portion of {{@vec}} from start to end.
+Reverses the portion of {{@vec}} from {{start}} to {{end}}.
 
 <procedure>(@vector-copy! @to at @from [start [end]]) -> unspecified [SRFI 133]</procedure>
 
-Copies the portion of {{@from}} from start to end onto {{@to}}, starting at index at.
+Copies the portion of {{@from}} from {{start}} to {{end}} onto {{@to}}, starting at index at.
 
 <procedure>(@vector-reverse-copy! @to at @from [start [end]]) -> unspecified [SRFI 133]</procedure>
 
@@ -300,7 +300,7 @@ The same as {{@vector-copy!}}, but copies in reverse.
 
 <procedure>(@vector-unfold! f @vec start end seed) -> @vector [SRFI 133]</procedure>
 
-Like vector-unfold, but the elements are copied into the vector {{@vec}} starting at element start rather than into a newly allocated vector. Terminates when end - start elements have been generated.
+Like vector-unfold, but the elements are copied into the vector {{@vec}} starting at element {{start}} rather than into a newly allocated vector. Terminates when {{end}} - {{start}} elements have been generated.
 
 <procedure>(@vector-unfold-right! f @vec start end seed) -> @vector [SRFI 133]</procedure>
 
@@ -360,7 +360,7 @@ The tests are for the c64 and c128 procedures and the @? procedures only. The as
   * srfi/160/base.sld - R7RS (srfi 160 base) library.
   * srfi/160/base/complex.scm - Complex number implementation on top of SRFI 4.
   * srfi/160/base/valid.scm - Validity (@?) predicates.
-  * srfi/160/base/at-vector2list.scm - Reimplementation of SRFI 4's @vector->list procedures that accept start and end optional arguments.
+  * srfi/160/base/at-vector2list.scm - Reimplementation of SRFI 4's @vector->list procedures that accept {{start}} and {{end}} optional arguments.
   * srfi/160/base/r7rec.scm - Record-type definitions for R7RS or SRFI 9.
   * srfi/160/base/r6rec.scm - Record-type definitions for R6RS.
   * shared-base-tests.scm - Shared tests (no dependencies).
