@@ -66,7 +66,7 @@ A procedure {{f}} that takes the parameters {{arg[1] arg[2] ...}} and returns a 
 
 Must be a heterogeneous vector, i.e. it must satisfy the predicate vector?.
 
-<parameter>@vec
+<parameter>@vec</parameter>
 
 <parameter>@to</parameter>
 
