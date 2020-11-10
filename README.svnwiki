@@ -68,11 +68,11 @@ Must be a heterogeneous vector, i.e. it must satisfy the predicate vector?.
 
 <parameter>@vec, @to, @from</parameter>
 
-Must be a homogeneous vector, i.e. it must satisfy the predicate {{@vector?}}. In @vector-copy! and reverse-@vector-copy!, @to is the destination and @from is the source.
+Must be a homogeneous vector, i.e. it must satisfy the predicate {{@vector?}}. In {{@vector-copy!}} and {{reverse-@vector-copy!}}, {{@to}} is the destination and {{@from}} is the source.
 
 <parameter>i, j, start, at</parameter>
 
-Must be an exact nonnegative integer less than the length of the {{@vector}}. In @vector-copy! and reverse-@vector-copy!, at refers to the destination and start to the source.
+Must be an exact nonnegative integer less than the length of the {{@vector}}. In {{@vector-copy!}} and {{reverse-@vector-copy!}}, at refers to the destination and start to the source.
 
 <parameter>end</parameter>
 
@@ -292,11 +292,11 @@ Reverses the portion of {{@vec}} from start to end.
 
 <procedure>(@vector-copy! @to at @from [start [end]]) -> unspecified [SRFI 133]</procedure>
 
-Copies the portion of @from from start to end onto @to, starting at index at.
+Copies the portion of {{@from}} from start to end onto {{@to}}, starting at index at.
 
 <procedure>(@vector-reverse-copy! @to at @from [start [end]]) -> unspecified [SRFI 133]</procedure>
 
-The same as @vector-copy!, but copies in reverse.
+The same as {{@vector-copy!}}, but copies in reverse.
 
 <procedure>(@vector-unfold! f @vec start end seed) -> @vector [SRFI 133]</procedure>
 
