@@ -212,7 +212,7 @@ Iterate over the elements of {{@vec}} and apply {{f}} to each, returning respect
 
 If more than one vector is passed, {{f}} gets one element from each vector as arguments. If the lengths of the vectors differ, iteration stops at the end of the shortest vector. For {{@vector-map!}}, only {{@vec}} is modified even when multiple vectors are passed.
 
-If @vector-map or {{@vector-map!}} returns more than once (i.e. because of a continuation captured by f), the values returned or stored by earlier returns may be mutated.
+If @vector-map or {{@vector-map!}} returns more than once (i.e. because of a continuation captured by {{f}}), the values returned or stored by earlier returns may be mutated.
 
 <procedure>(@vector-count pred? @vec @vec2 ...) -> exact nonnegative integer [SRFI 133]</procedure>
 
