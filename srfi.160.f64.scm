@@ -36,7 +36,7 @@
           f64vector-unfold! f64vector-unfold-right!)
   ;; Conversion 
   (export f64vector->list reverse-f64vector->list reverse-list->f64vector
-          f64vector->vector vector->f64vector)
+          list->f64vector f64vector->vector vector->f64vector)
   ;; Misc
   (export make-f64vector-generator f64vector-comparator write-f64vector)
 

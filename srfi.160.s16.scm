@@ -36,7 +36,7 @@
           s16vector-unfold! s16vector-unfold-right!)
   ;; Conversion 
   (export s16vector->list reverse-s16vector->list reverse-list->s16vector
-          s16vector->vector vector->s16vector)
+          list->s16vector s16vector->vector vector->s16vector)
   ;; Misc
   (export make-s16vector-generator s16vector-comparator write-s16vector)
 

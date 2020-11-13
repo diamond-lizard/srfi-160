@@ -36,7 +36,7 @@
           u16vector-unfold! u16vector-unfold-right!)
   ;; Conversion 
   (export u16vector->list reverse-u16vector->list reverse-list->u16vector
-          u16vector->vector vector->u16vector)
+          list->u16vector u16vector->vector vector->u16vector)
   ;; Misc
   (export make-u16vector-generator u16vector-comparator write-u16vector)
 

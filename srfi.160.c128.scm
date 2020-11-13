@@ -36,7 +36,7 @@
           c128vector-unfold! c128vector-unfold-right!)
   ;; Conversion 
   (export c128vector->list reverse-c128vector->list reverse-list->c128vector
-          c128vector->vector vector->c128vector)
+          list->c128vector c128vector->vector vector->c128vector)
   ;; Misc
   (export make-c128vector-generator c128vector-comparator write-c128vector)
 

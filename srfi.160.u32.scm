@@ -36,7 +36,7 @@
           u32vector-unfold! u32vector-unfold-right!)
   ;; Conversion 
   (export u32vector->list reverse-u32vector->list reverse-list->u32vector
-          u32vector->vector vector->u32vector)
+          list->u32vector u32vector->vector vector->u32vector)
   ;; Misc
   (export make-u32vector-generator u32vector-comparator write-u32vector)
 

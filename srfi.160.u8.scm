@@ -36,7 +36,7 @@
           u8vector-unfold! u8vector-unfold-right!)
   ;; Conversion 
   (export u8vector->list reverse-u8vector->list reverse-list->u8vector
-          u8vector->vector vector->u8vector)
+          list->u8vector u8vector->vector vector->u8vector)
   ;; Misc
   (export make-u8vector-generator u8vector-comparator write-u8vector)
 

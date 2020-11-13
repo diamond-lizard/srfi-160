@@ -36,7 +36,7 @@
           s8vector-unfold! s8vector-unfold-right!)
   ;; Conversion 
   (export s8vector->list reverse-s8vector->list reverse-list->s8vector
-          s8vector->vector vector->s8vector)
+          list->s8vector s8vector->vector vector->s8vector)
   ;; Misc
   (export make-s8vector-generator s8vector-comparator write-s8vector)
 
