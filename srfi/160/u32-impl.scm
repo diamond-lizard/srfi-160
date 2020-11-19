@@ -119,13 +119,10 @@
   (u32vector=* (car vecs) (cadr vecs) (cddr vecs)))
 
 (define (u32vector=* vec1 vec2 vecs)
-  (if (null? vecs)
-    (and
-      (u32dyadic-vecs= vec1 0 (u32vector-length vec1)
-                          vec2 0 (u32vector-length vec2))
-      (if (null? vecs)
-        #t
-        (u32vector=* vec2 (car vecs) (cdr vecs))))))
+  (and (u32dyadic-vecs= vec1 0 (u32vector-length vec1)
+                      vec2 0 (u32vector-length vec2))
+       (or (null? vecs)
+           (u32vector=* vec2 (car vecs) (cdr vecs)))))
 
 (define (u32dyadic-vecs= vec1 start1 end1 vec2 start2 end2)
   (cond

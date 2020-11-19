@@ -119,13 +119,10 @@
   (s64vector=* (car vecs) (cadr vecs) (cddr vecs)))
 
 (define (s64vector=* vec1 vec2 vecs)
-  (if (null? vecs)
-    (and
-      (s64dyadic-vecs= vec1 0 (s64vector-length vec1)
-                          vec2 0 (s64vector-length vec2))
-      (if (null? vecs)
-        #t
-        (s64vector=* vec2 (car vecs) (cdr vecs))))))
+  (and (s64dyadic-vecs= vec1 0 (s64vector-length vec1)
+                      vec2 0 (s64vector-length vec2))
+       (or (null? vecs)
+           (s64vector=* vec2 (car vecs) (cdr vecs)))))
 
 (define (s64dyadic-vecs= vec1 start1 end1 vec2 start2 end2)
   (cond

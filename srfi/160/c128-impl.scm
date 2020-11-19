@@ -119,13 +119,10 @@
   (c128vector=* (car vecs) (cadr vecs) (cddr vecs)))
 
 (define (c128vector=* vec1 vec2 vecs)
-  (if (null? vecs)
-    (and
-      (c128dyadic-vecs= vec1 0 (c128vector-length vec1)
-                          vec2 0 (c128vector-length vec2))
-      (if (null? vecs)
-        #t
-        (c128vector=* vec2 (car vecs) (cdr vecs))))))
+  (and (c128dyadic-vecs= vec1 0 (c128vector-length vec1)
+                      vec2 0 (c128vector-length vec2))
+       (or (null? vecs)
+           (c128vector=* vec2 (car vecs) (cdr vecs)))))
 
 (define (c128dyadic-vecs= vec1 start1 end1 vec2 start2 end2)
   (cond

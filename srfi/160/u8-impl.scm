@@ -119,13 +119,10 @@
   (u8vector=* (car vecs) (cadr vecs) (cddr vecs)))
 
 (define (u8vector=* vec1 vec2 vecs)
-  (if (null? vecs)
-    (and
-      (u8dyadic-vecs= vec1 0 (u8vector-length vec1)
-                          vec2 0 (u8vector-length vec2))
-      (if (null? vecs)
-        #t
-        (u8vector=* vec2 (car vecs) (cdr vecs))))))
+  (and (u8dyadic-vecs= vec1 0 (u8vector-length vec1)
+                      vec2 0 (u8vector-length vec2))
+       (or (null? vecs)
+           (u8vector=* vec2 (car vecs) (cdr vecs)))))
 
 (define (u8dyadic-vecs= vec1 start1 end1 vec2 start2 end2)
   (cond

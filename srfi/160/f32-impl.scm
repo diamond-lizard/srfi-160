@@ -119,13 +119,10 @@
   (f32vector=* (car vecs) (cadr vecs) (cddr vecs)))
 
 (define (f32vector=* vec1 vec2 vecs)
-  (if (null? vecs)
-    (and
-      (f32dyadic-vecs= vec1 0 (f32vector-length vec1)
-                          vec2 0 (f32vector-length vec2))
-      (if (null? vecs)
-        #t
-        (f32vector=* vec2 (car vecs) (cdr vecs))))))
+  (and (f32dyadic-vecs= vec1 0 (f32vector-length vec1)
+                      vec2 0 (f32vector-length vec2))
+       (or (null? vecs)
+           (f32vector=* vec2 (car vecs) (cdr vecs)))))
 
 (define (f32dyadic-vecs= vec1 start1 end1 vec2 start2 end2)
   (cond
