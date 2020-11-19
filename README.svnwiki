@@ -396,9 +396,9 @@ The following files are provided:
 Thanks to all participants in the SRFI 160 mailing list over the unconscionably long time it took me to get this proposal to finalization. Special thanks to Shiro Kawai
 for bringing up many issues and contributing the code that extended many procedures from one {{@vector}} to many.
 === Authors
-==== John Cowan (based on SRFI 4 by Marc Feeley)
-==== Shiro Kawai (contributed a major patch).
-==== Ported to Chicken Scheme 5 by Sergey Goldgaber
+* John Cowan (based on SRFI 4 by Marc Feeley)
+* Shiro Kawai (contributed a major patch).
+* Ported to Chicken Scheme 5 by Sergey Goldgaber
 === Copyright
 Copyright © John Cowan 2018.
 
@@ -408,4 +408,4 @@ The above copyright notice and this permission notice (including the next paragr
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 === Version history
-==== [[https://github.com/diamond-lizard/srfi-160/releases/tag/0.1|0.1]] - Ported to Chicken Scheme 5
+* [[https://github.com/diamond-lizard/srfi-160/releases/tag/0.1|0.1]] - Ported to Chicken Scheme 5
