@@ -34,7 +34,15 @@
     (s8vector-copy! v 0 vec start end)
     v))
 
-(define (s8vector-copy! to at from start end)
+(define s8vector-copy!
+  (case-lambda
+    ((to at from)
+     (s8vector-copy!* to at from 0 (s8vector-length from)))
+    ((to at from start)
+     (s8vector-copy!* to at from start (s8vector-length from)))
+    ((to at from start end) (s8vector-copy!* to at from start end))))
+
+(define (s8vector-copy!* to at from start end)
   (let loop ((at at) (i start))
     (unless (= i end)
       (s8vector-set! to at (s8vector-ref from i))
@@ -51,7 +59,15 @@
     (s8vector-reverse-copy! v 0 vec start end)
     v))
 
-(define (s8vector-reverse-copy! to at from start end)
+(define s8vector-reverse-copy!
+  (case-lambda
+    ((to at from)
+     (s8vector-reverse-copy!* to at from 0 (s8vector-length from)))
+    ((to at from start)
+     (s8vector-reverse-copy!* to at from start (s8vector-length from)))
+    ((to at from start end) (s8vector-reverse-copy!* to at from start end))))
+
+(define (s8vector-reverse-copy!* to at from start end)
   (let loop ((at at) (i (- end 1)))
     (unless (< i start)
       (s8vector-set! to at (s8vector-ref from i))

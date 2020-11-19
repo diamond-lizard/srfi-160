@@ -34,7 +34,15 @@
     (s16vector-copy! v 0 vec start end)
     v))
 
-(define (s16vector-copy! to at from start end)
+(define s16vector-copy!
+  (case-lambda
+    ((to at from)
+     (s16vector-copy!* to at from 0 (s16vector-length from)))
+    ((to at from start)
+     (s16vector-copy!* to at from start (s16vector-length from)))
+    ((to at from start end) (s16vector-copy!* to at from start end))))
+
+(define (s16vector-copy!* to at from start end)
   (let loop ((at at) (i start))
     (unless (= i end)
       (s16vector-set! to at (s16vector-ref from i))
@@ -51,7 +59,15 @@
     (s16vector-reverse-copy! v 0 vec start end)
     v))
 
-(define (s16vector-reverse-copy! to at from start end)
+(define s16vector-reverse-copy!
+  (case-lambda
+    ((to at from)
+     (s16vector-reverse-copy!* to at from 0 (s16vector-length from)))
+    ((to at from start)
+     (s16vector-reverse-copy!* to at from start (s16vector-length from)))
+    ((to at from start end) (s16vector-reverse-copy!* to at from start end))))
+
+(define (s16vector-reverse-copy!* to at from start end)
   (let loop ((at at) (i (- end 1)))
     (unless (< i start)
       (s16vector-set! to at (s16vector-ref from i))

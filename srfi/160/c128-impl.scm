@@ -34,7 +34,15 @@
     (c128vector-copy! v 0 vec start end)
     v))
 
-(define (c128vector-copy! to at from start end)
+(define c128vector-copy!
+  (case-lambda
+    ((to at from)
+     (c128vector-copy!* to at from 0 (c128vector-length from)))
+    ((to at from start)
+     (c128vector-copy!* to at from start (c128vector-length from)))
+    ((to at from start end) (c128vector-copy!* to at from start end))))
+
+(define (c128vector-copy!* to at from start end)
   (let loop ((at at) (i start))
     (unless (= i end)
       (c128vector-set! to at (c128vector-ref from i))
@@ -51,7 +59,15 @@
     (c128vector-reverse-copy! v 0 vec start end)
     v))
 
-(define (c128vector-reverse-copy! to at from start end)
+(define c128vector-reverse-copy!
+  (case-lambda
+    ((to at from)
+     (c128vector-reverse-copy!* to at from 0 (c128vector-length from)))
+    ((to at from start)
+     (c128vector-reverse-copy!* to at from start (c128vector-length from)))
+    ((to at from start end) (c128vector-reverse-copy!* to at from start end))))
+
+(define (c128vector-reverse-copy!* to at from start end)
   (let loop ((at at) (i (- end 1)))
     (unless (< i start)
       (c128vector-set! to at (c128vector-ref from i))

@@ -34,7 +34,15 @@
     (f64vector-copy! v 0 vec start end)
     v))
 
-(define (f64vector-copy! to at from start end)
+(define f64vector-copy!
+  (case-lambda
+    ((to at from)
+     (f64vector-copy!* to at from 0 (f64vector-length from)))
+    ((to at from start)
+     (f64vector-copy!* to at from start (f64vector-length from)))
+    ((to at from start end) (f64vector-copy!* to at from start end))))
+
+(define (f64vector-copy!* to at from start end)
   (let loop ((at at) (i start))
     (unless (= i end)
       (f64vector-set! to at (f64vector-ref from i))
@@ -51,7 +59,15 @@
     (f64vector-reverse-copy! v 0 vec start end)
     v))
 
-(define (f64vector-reverse-copy! to at from start end)
+(define f64vector-reverse-copy!
+  (case-lambda
+    ((to at from)
+     (f64vector-reverse-copy!* to at from 0 (f64vector-length from)))
+    ((to at from start)
+     (f64vector-reverse-copy!* to at from start (f64vector-length from)))
+    ((to at from start end) (f64vector-reverse-copy!* to at from start end))))
+
+(define (f64vector-reverse-copy!* to at from start end)
   (let loop ((at at) (i (- end 1)))
     (unless (< i start)
       (f64vector-set! to at (f64vector-ref from i))
