@@ -202,7 +202,7 @@
       (let loop ((r knil) (i (- (u8vector-length vec) 1)))
         (if (negative? i)
           r
-          (loop (kons (u8vector-ref vec i) r) (- i 1)))))
+          (loop (kons r (u8vector-ref vec i)) (- i 1)))))
     ;; generic case
     (let* ((vecs (cons vec vecs))
            (len (apply min (map u8vector-length vecs))))
@@ -462,11 +462,10 @@
     ((vec start end) (u8vector-reverse-some! vec start end))))
 
 (define (u8vector-reverse-some! vec start end)
-  (let ((len (u8vector-length vec)))
-    (let loop ((i 0)(j (- len 1)))
-      (when (< i j)
-        (u8vector-swap! vec i j)
-        (loop (+ i 1) (- j 1))))))
+  (let loop ((i start) (j (- end 1)))
+    (when (< i j)
+      (u8vector-swap! vec i j)
+      (loop (+ i 1) (- j 1)))))
 
 (define (u8vector-unfold! f vec start end seed)
   (let loop ((i start) (seed seed))

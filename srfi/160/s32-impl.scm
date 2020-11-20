@@ -202,7 +202,7 @@
       (let loop ((r knil) (i (- (s32vector-length vec) 1)))
         (if (negative? i)
           r
-          (loop (kons (s32vector-ref vec i) r) (- i 1)))))
+          (loop (kons r (s32vector-ref vec i)) (- i 1)))))
     ;; generic case
     (let* ((vecs (cons vec vecs))
            (len (apply min (map s32vector-length vecs))))
@@ -462,11 +462,10 @@
     ((vec start end) (s32vector-reverse-some! vec start end))))
 
 (define (s32vector-reverse-some! vec start end)
-  (let ((len (s32vector-length vec)))
-    (let loop ((i 0)(j (- len 1)))
-      (when (< i j)
-        (s32vector-swap! vec i j)
-        (loop (+ i 1) (- j 1))))))
+  (let loop ((i start) (j (- end 1)))
+    (when (< i j)
+      (s32vector-swap! vec i j)
+      (loop (+ i 1) (- j 1)))))
 
 (define (s32vector-unfold! f vec start end seed)
   (let loop ((i start) (seed seed))
